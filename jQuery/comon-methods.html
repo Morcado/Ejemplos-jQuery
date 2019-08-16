@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+        crossorigin="anonymous"></script>
+    <style type="text/css">
+        .correct {
+            color: green;
+        }
+
+        .wrong {
+            color: red;
+            background-color: pink;
+        }
+
+        .done {
+            color: #121212;
+            text-decoration-line: line-through;
+        }
+    </style>
+</head>
+<body>
+    <ul id="common">
+        <h1>Common methods</h1>
+        <li>val()</li>
+        <li>text()</li>
+        <li>attr()</li>
+        <li>html()</li>
+        <li>addClass()</li>
+        <li>removeClass()</li>
+        <li>toggleClass()</li>
+    </ul>
+    <input type="text" name="text">
+    <img src="cover.jpg" alt="cover2.jpg">
+
+
+    <h2>Lista</h2>
+    <ul id="tareas">
+        <li>Correr</li>
+        <li>tarea</li>
+        <li>libreta</li>
+    </ul>
+    <script type="text/javascript">
+        $('#common').html()
+        $('h1').text()
+        $('h1').text("hola") // cambia el nombre
+        var current = $('#common').html() // guarda en variable
+        $('#common').html(current + '<li>Nuevo</li>') // concatena la variable y un nuevo elemento html
+        $('img').attr('src', 'cover2.jpg') // cambia la iamgen
+        $('img').attr('width', '200')
+
+        $('#tareas').addClass('correct') // agrega clase correcto a id=tareas
+        $('#tareas').removeClass('correct') // quita la clase
+        $('#tareas').toggleClass('correct') // cambia el estado
+
+        $('#tareas li:first').toggleClass('correct') // cambia el estado del primer elemento de la lista de tareas
+        $('#tareas li:nth-of-type(2)').toggleClass('correct') // segundo
+        $('#tareas li:nth-of-type(2)').toggleClass('wrong') // tercero
+    </script>
+</body>
+</html>
