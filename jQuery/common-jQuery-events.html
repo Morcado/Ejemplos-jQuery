@@ -41,5 +41,16 @@
     	$('ul').on('click', 'li', function(event) {
     		console.log($(this).text());
     	})
+
+        $('button').on('mouseenter', function() {
+            console.log('fasd');
+            $(this).css('background-color', 'pink');
+        })
+
+        $('button').on('mouseout', function() {
+            console.log('fasd');
+            $(this).css('background-color', 'white');
+        })
+        
     </script>
 </body>

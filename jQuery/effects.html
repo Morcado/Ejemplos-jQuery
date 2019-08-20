@@ -1,0 +1,51 @@
+ <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Effects</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+        crossorigin="anonymous"></script>
+    <style type="text/css">
+    	div	{
+    		background-color: red;
+    		width: 100px;
+    		padding: 30px;
+    		margin: 20px;
+    		display: inline-block;
+    		border: 1px dotted black;
+      	}
+    </style>
+</head>
+<body>
+
+    <h1>Common jQuery Effects sasasaa</h1>
+
+    <h2>En el chasquido del guante..</h2>
+    <div class="fade">Me siento raro sr. stark</div>
+    <div class="fade">No me quiero ir sr. stark :c</div>
+    <div class="fade">Ahhh......</div>
+    <button id="fade-button">:v</button>
+
+    <br>
+    <h2>Deslizar</h2>
+    <div class="slide">holaaaaaaa</div>
+    <div class="slide">holaaaaaaa</div>
+    <div class="slide">holaaaaaaa</div>
+    <button id="slide-button">jajajaj</button>
+    <script type="text/javascript">7
+    	$('#fade-button').on('click', function() {
+    		$('.fade').fadeToggle(1000, function() {
+                console.log('haha');
+            })
+                // $(this).remove(); // elimina el objeto
+    	})
+        $('#slide-button').on('click', function() {
+            $('.slide').slideToggle(1000, function() {
+                console.log('jejejeje');
+            });
+            // $(this).remove(); // elimina el objeto
+        })
+        
+    </script>
+</body>
