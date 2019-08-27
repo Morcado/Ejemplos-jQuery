@@ -7,14 +7,14 @@
         integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
         crossorigin="anonymous"></script>
     <style type="text/css">
-    	div	{
-    		background-color: red;
-    		width: 100px;
-    		padding: 30px;
-    		margin: 20px;
-    		display: inline-block;
-    		border: 1px dotted black;
-      	}
+        div {
+            background-color: red;
+            width: 100px;
+            padding: 30px;
+            margin: 20px;
+            display: inline-block;
+            border: 1px dotted black;
+        }
     </style>
 </head>
 <body>
@@ -34,18 +34,19 @@
     <div class="slide">holaaaaaaa</div>
     <button id="slide-button">jajajaj</button>
     <script type="text/javascript">7
-    	$('#fade-button').on('click', function() {
-    		$('.fade').fadeToggle(1000, function() {
+        $('#fade-button').on('click', function() {
+            $('.fade').fadeToggle(1000, function() {
                 console.log('haha');
             })
                 // $(this).remove(); // elimina el objeto
-    	})
+        })
         $('#slide-button').on('click', function() {
             $('.slide').slideToggle(1000, function() {
                 console.log('jejejeje');
             });
             // $(this).remove(); // elimina el objeto
         })
+
         
     </script>
 </body>
