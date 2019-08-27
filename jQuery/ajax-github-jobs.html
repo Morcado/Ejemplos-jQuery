@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Trabajos de g</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+        crossorigin="anonymous"></script>
+    <style type="text/css">
+    	.ubic, .desc {
+    		display: none;
+    	}
+    </style>
+</head>
+<body>
+	<h1>Trabajos dighub</h1>
+	<div class="trabajos">
+		<!-- Generar trabaojs -->
+
+	</div>
+
+	<script type="text/javascript">
+		$.ajax({
+			url: "https://jobs.github.com/positions.json?description=ruby&page=1",
+			success: function(data) {
+				var job;
+				for (var i = data.length - 1; i >= 0; i--) {
+					$('.trabajos').append("<h2>" + data[i].title + "</h2>");
+					$('.trabajos').append('<h3 class="ubic">' + data[i].location + "</h3>");
+					$('.trabajos').append('<div class="desc">' + data[i].description + '</div>');
+				}
+			}
+		});
+
+		$(".trabajos").on("click", "h2", function(){
+			$(this).next().slideToggle();
+			$(this).next().next().slideToggle();
+		})
+	</script>
+</body>
